@@ -20,10 +20,11 @@ from spacy.lang.kn import Kannada
 from spacy.lang.ml import Malayalam
 from spacy.lang.ta import Tamil
 
-pytesseract.pytesseract.tesseract_cmd = r'S:\Data\Study\Datascience\models\Tesseract\tesseract.exe'
-tessdata_dir_config = r'--tessdata-dir "S:\Data\Study\Datascience\models\Tesseract\tessdata_best"'
+pytesseract.pytesseract.tesseract_cmd = r'Tesseract\tesseract.exe'
+tessdata_dir_config = r'--tessdata-dir "Tesseract\tessdata_best"'
 
-model_path = r"S:\\Data\\Study\Models\\facebook\\nllb-200-1.3B"
+model_path = r"facebook\\nllb-200-1.3B"
+model_path = "facebook/nllb-200-1.3B"
 model_translate = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 model_tokenizer = NllbTokenizer.from_pretrained(model_path)
 
